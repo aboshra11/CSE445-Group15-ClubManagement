@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Staff>
+  <StaffMember>
+    <Username>TA</Username>
+    <Password>Cse445!</Password>
+    <Role>TA</Role>
+  </StaffMember>
+</Staff>
