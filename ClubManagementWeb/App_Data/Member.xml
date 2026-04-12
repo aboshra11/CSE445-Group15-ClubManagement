@@ -1,2 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<Members />
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Members>
+	<Member>
+		<Username>testmember</Username>
+		<Password>Test123!</Password>
+		<Email>testmember@test.com</Email>
+		<RegistrationDate>2026-04-12</RegistrationDate>
+	</Member>
+</Members>
