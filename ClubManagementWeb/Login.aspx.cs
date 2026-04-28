@@ -4,6 +4,7 @@ using System.Web;
 using System.Web.Security;
 using System.Web.UI;
 using System.Xml.Linq;
+using ShreyaHashLib;
 
 namespace ClubManagementWeb
 {
@@ -112,8 +113,9 @@ namespace ClubManagementWeb
                     string storedUsername = member.Element("Username")?.Value;
                     string storedPassword = member.Element("Password")?.Value;
 
-                    // Plain text comparison — TEMPORARY until ShreyaHashLib available
-                    if (storedUsername == username && storedPassword == password)
+                    // Hash the input password using ShreyaHashLib and compare to stored hash
+                    string hashedInput = ShreyaHashLib.PasswordHasher.HashPassword(password);
+                    if (storedUsername == username && storedPassword == hashedInput)
                         return true;
                 }
             }
