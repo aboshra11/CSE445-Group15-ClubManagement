@@ -1,9 +1,15 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Members>
-	<Member>
-		<Username>testmember</Username>
-		<Password>VN5/YG8lI8uo76wXP6tC+39Z1Wzv+XTI/bc0LPLP40U=</Password>
-		<Email>testmember@test.com</Email>
-		<RegistrationDate>2026-04-12</RegistrationDate>
-	</Member>
+  <Member>
+    <Username>testmember</Username>
+    <Password>VN5/YG8lI8uo76wXP6tC+39Z1Wzv+XTI/bc0LPLP40U=</Password>
+    <Email>testmember@test.com</Email>
+    <RegistrationDate>2026-04-12</RegistrationDate>
+  </Member>
+  <Member>
+    <Username>newmember</Username>
+    <Password>xQ0URLDWYBLiKKcOnJxP8Srbtj7Wq4pkfL+DKWqU4SU=</Password>
+    <Email>newmember@test.com</Email>
+    <RegistrationDate>2026-04-28</RegistrationDate>
+  </Member>
 </Members>
