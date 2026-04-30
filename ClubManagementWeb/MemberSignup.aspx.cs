@@ -45,7 +45,7 @@ namespace ClubManagementWeb
                 return;
             }
 
-            // Validate CAPTCHA — IsValid is a property not a method
+            // Validate CAPTCHA - IsValid is a property not a method
             if (!captcha.IsValid)
             {
                 DisplayError("CAPTCHA verification failed. Please try again.");
@@ -72,6 +72,37 @@ namespace ClubManagementWeb
 
             // Redirect after 2 seconds
             Response.AddHeader("Refresh", "2;url=Login.aspx");
+        }
+
+        // Allows testing CAPTCHA without completing full registration
+        protected void btnTestCaptcha_Click(object sender, EventArgs e)
+        {
+            if (captcha.IsValid)
+            {
+                lblCaptchaTest.Text = "✅ CAPTCHA test PASSED! The code you entered is correct.";
+                lblCaptchaTest.ForeColor = System.Drawing.Color.Green;
+            }
+            else
+            {
+                lblCaptchaTest.Text = "❌ CAPTCHA test FAILED! Please enter the correct code shown above.";
+                lblCaptchaTest.ForeColor = System.Drawing.Color.Red;
+            }
+        }
+
+        // Demonstrates that Hash DLL works correctly
+        protected void btnTestHash_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtTestHash.Text))
+            {
+                string hash = PasswordHasher.HashPassword(txtTestHash.Text);
+                lblTestHashResult.Text = "Hash: " + hash;
+                lblTestHashResult.ForeColor = System.Drawing.Color.DarkGreen;
+            }
+            else
+            {
+                lblTestHashResult.Text = "Please enter a password to hash.";
+                lblTestHashResult.ForeColor = System.Drawing.Color.Red;
+            }
         }
 
         // Checks if username already exists in Member.xml
