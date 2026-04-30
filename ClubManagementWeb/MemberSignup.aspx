@@ -81,6 +81,28 @@
                 <uc:CaptchaControl ID="captcha" runat="server" />
             </div>
 
+            <div class="field">
+                <asp:Button ID="btnTestCaptcha" runat="server" Text="Test CAPTCHA Only" 
+                    OnClick="btnTestCaptcha_Click" CssClass="btn-test" />
+                <asp:Label ID="lblCaptchaTest" runat="server" ForeColor="Blue" />
+            </div>
+
+            <hr />
+
+            <h3>🔐 Test Password Hashing (Shreya's DLL)</h3>
+            <div class="field">
+                <label>Test Password:</label>
+                <asp:TextBox ID="txtTestHash" runat="server" TextMode="Password" />
+                <asp:Button ID="btnTestHash" runat="server" Text="Generate Hash" 
+                    OnClick="btnTestHash_Click" CssClass="btn-test" />
+            </div>
+            <div class="info">
+                <asp:Label ID="lblTestHashResult" runat="server" Font-Bold="true" />
+            </div>
+
+            <hr />
+
+
             <asp:Button ID="btnSignup" runat="server" Text="Create Account"
                 CssClass="btn" OnClick="btnSignup_Click" />
 
