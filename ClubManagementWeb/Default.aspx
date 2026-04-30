@@ -44,7 +44,10 @@
                             <td>CAPTCHA Verification — validates user is human on signup</td>
                             <td>user input</td>
                             <td>bool</td>
-                            <td><a href="MemberSignup.aspx" class="btn btn-sm btn-info">Test on Signup</a></td>
+                            <td>
+                                <a href="MemberSignup.aspx" class="btn btn-sm btn-info">Test on Signup</a>
+                                <a href="TryIt_Captcha.aspx" class="btn btn-sm btn-info" style="margin-left:5px;">Test CAPTCHA</a>
+                            </td>
                         </tr>
                         <tr>
                             <td>Shreya Sharma</td>
